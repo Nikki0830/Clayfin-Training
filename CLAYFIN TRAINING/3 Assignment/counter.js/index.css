@@ -1,0 +1,12 @@
+h1,
+#counter {
+  text-align: center;
+}
+
+.btn {
+  margin-left: 43%;
+  /* margin-top: 10px; */
+}
+#counter {
+  font-size: 100px;
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Counter</h1>
+      <p id="counter">0</p>
+      <div class="btn">
+        <button class="increase" onClick="btnInc()" style = "background-color: green;">Increase</button>
+        <button class="reset" onClick="btnDec()"style = "background-color: red;">Decrease</button>
+        <button class="decrease" onClick="btnReset()"style = "background-color: yellow;">Reset</button>
+      </div>
+    </div>
+
+    <!-- <script src="index.js"></script> -->
+  </body>
+</html>
+<script>
+  const counter = document.getElementById("counter");
+  //   const btns = document.getElementsByClassName("btn");
+  //   console.log(btns);
+
+  let count = 0;
+  //   disabled = false;
+
+  function btnInc() {
+    count++;
+    counter.innerHTML = count;
+    if (count > 0) {
+      counter.style.color = "orange";
+    }
+  }
+
+  function btnDec() {
+    if (count > 0) {
+      count--;
+      counter.innerHTML = count;
+    }
+  }
+
+  function btnReset() {
+    count = 0;
+    counter.innerHTML = count;
+  }
+</script>
