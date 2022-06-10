@@ -1,15 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    <select>
-        
-    </select>
-    
-</body>
+  </head>
+  <body>
+    <div class="container">
+      <form class="form">
+        <div class="form-group">
+          <label class="form-label">Select Country</label>
+          <div class="c">
+            <select id="country" name="country" class="formc"></select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label">State</label>
+          <div class="c">
+            <select name="state" id="state" class="formc"></select>
+          </div>
+        </div>
+      </form>
+    </div>
+  </body>
 </html>
+<script>
+  // Countries
+  var country_arr = new Array(
+    "India",
+    "Anguilla",
+    "Armenia",
+    "Brazil",
+    "China"
+  );
+
+  // States
+  var s_a = new Array();
+
+  s_a[1] =
+    "Punjab|Odisha|Haryana|Goa|Karnataka|Sikkim|Bihar|Delhi|Uttra Khand|Meghalaya";
+  s_a[2] =
+    "Anse aux Pins|Anse Boileau|Anse Etoile|Anse Louis|Anse Royale|Baie Lazare|Baie Sainte Anne|Beau Vallon|Bel Air|Bel Ombre|Cascade|Glacis|Grand' Anse (on Mahe)|Grand' Anse (on Praslin)|La Digue|La Riviere Anglaise|Mont Buxton|Mont Fleuri|Plaisance|Pointe La Rue|Port Glaud|Saint Louis|Takamaka";
+  s_a[3] = "Eastern|Northern|Southern|Western";
+  s_a[4] = "Singapore";
+  s_a[5] =
+    "Banskobystricky|Bratislavsky|Kosicky|Nitriansky|Presovsky|Trenciansky|Trnavsky|Zilinsky";
+
+  function populateStates(countryElementId, stateElementId) {
+    var selectedCountryIndex =
+      document.getElementById(countryElementId).selectedIndex;
+
+    var stateElement = document.getElementById(stateElementId);
+
+    stateElement.length = 0;
+    stateElement.options[0] = new Option("Select State", "");
+    stateElement.selectedIndex = 0;
+
+    var state_arr = s_a[selectedCountryIndex].split("|");
+
+    for (var i = 0; i < state_arr.length; i++) {
+      stateElement.options[stateElement.length] = new Option(
+        state_arr[i],
+        state_arr[i]
+      );
+    }
+  }
+
+  function populateCountries(countryElementId, stateElementId) {
+    // given the id of the <select> tag as function argument, it inserts <option> tags
+    var countryElement = document.getElementById(countryElementId);
+    countryElement.length = 0;
+    countryElement.options[0] = new Option("Select Country", "-1");
+    countryElement.selectedIndex = 0;
+    for (var i = 0; i < country_arr.length; i++) {
+      countryElement.options[countryElement.length] = new Option(
+        country_arr[i],
+        country_arr[i]
+      );
+    }
+
+    // Assigned all countries. Now assign event listener for the states.
+
+    if (stateElementId) {
+      countryElement.onchange = function () {
+        populateStates(countryElementId, stateElementId);
+      };
+    }
+  }
+
+  populateCountries("country", "state");
+</script>
