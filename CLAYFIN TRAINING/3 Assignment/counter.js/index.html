@@ -12,9 +12,23 @@
       <h1>Counter</h1>
       <p id="counter">0</p>
       <div class="btn">
-        <button class="increase" onClick="btnInc()" style = "background-color: green;">Increase</button>
-        <button class="reset" onClick="btnDec()"style = "background-color: red;">Decrease</button>
-        <button class="decrease" onClick="btnReset()"style = "background-color: yellow;">Reset</button>
+        <button
+          class="increase"
+          onClick="btnInc()"
+          style="background-color: green"
+        >
+          Increase
+        </button>
+        <button class="reset" onClick="btnDec()" style="background-color: red">
+          Decrease
+        </button>
+        <button
+          class="decrease"
+          onClick="btnReset()"
+          style="background-color: yellow"
+        >
+          Reset
+        </button>
       </div>
     </div>
 
@@ -33,15 +47,19 @@
     count++;
     counter.innerHTML = count;
     if (count > 0) {
-      counter.style.color = "orange";
+      counter.style.color = "green";
     }
+    // if (count === 3) {
+    //   counter.style.color = "green";
+    // }
   }
 
   function btnDec() {
-    if (count > 0) {
+    // if (count === -1) {
       count--;
       counter.innerHTML = count;
-    }
+      counter.style.color = "red";
+    // }
   }
 
   function btnReset() {

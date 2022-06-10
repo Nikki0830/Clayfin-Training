@@ -4,9 +4,19 @@ h1,
 }
 
 .btn {
-  margin-left: 43%;
+  margin-left: 25%;
   /* margin-top: 10px; */
 }
 #counter {
   font-size: 100px;
 }
+.container {
+  margin-top: 50px;
+  border: 2px solid black;
+  width: 30%;
+  height: 500px;
+  margin: auto;
+  border-radius: 50%;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
