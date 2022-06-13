@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Clayfin's Checkbox</title>
+  </head>
+
+  <body>
+    <legend><b>Name</b></legend>
+
+    <input type="text" name="Address" id="primaryaddress" />
+    <label for="primaryzip">Door Number:</label>
+    <input type="text" name="Zip code" id="primaryzip" />
+    <label for="primaryzip1">Address</label>
+    <input type="text" name="Zip code" id="primaryzip1" />
+    <br />
+
+    <input type="checkbox" id="same" name="same" onchange="addressFunction()" />
+    <label for="same"> </label>
+
+    <legend><b>Name</b></legend>
+
+    <input type="text" name="Address" id="secondaryaddress" />
+    <label for="secondaryzip"> Door No:</label>
+    <input type="text" name="Zip code" id="secondaryzip" />
+    <label for="secondaryzip1"> Address</label>
+    <input type="text" name="Zip code" id="secondaryzip1" />
+    <br />
+
+    <script>
+      function addressFunction() {
+        if (document.getElementById("same").checked) {
+          document.getElementById("secondaryaddress").value =
+            document.getElementById("primaryaddress").value;
+
+          document.getElementById("secondaryzip").value =
+            document.getElementById("primaryzip").value;
+
+          document.getElementById("secondaryzip1").value =
+            document.getElementById("primaryzip1").value;
+        } else {
+          document.getElementById("secondaryaddress").value = "";
+          document.getElementById("secondaryzip").value = "";
+          document.getElementById("secondaryzip1").value = "";
+        }
+      }
+    </script>
+  </body>
+</html>
