@@ -1,0 +1,16 @@
+.container {
+  margin-left: 45%;
+  margin-top: 50px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.h1 {
+  margin-left: 48%;
+}
+.button1 {
+  margin-left: 47%;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.button2 {
+  margin-left: 2px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
