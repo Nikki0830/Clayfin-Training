@@ -11,11 +11,11 @@ export class Comp2 extends Component {
     return (
       <>
         <div className="parent2">
-          {this.props.name.map((item) => {
+          {this.props.name.map((item,index) => {
             return (
-              <>
-                <Comp3 name2={item} />
-              </>
+              
+                <Comp3 key={index} name2={item} />
+              
             );
           })}
         </div>

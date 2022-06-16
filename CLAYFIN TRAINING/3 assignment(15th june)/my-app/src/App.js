@@ -1,14 +1,18 @@
 // import logo from './logo.svg';
 import "./App.css";
-import Comp from "./components/comp/Comp";
+// 
 import Calc from "./components/Calcf/Calc";
+import Spread from "./components/Spread";
+import Comp from "./components/Comp/Comp.js";
+
 
 function App() {
   return (
     <div className="App">
-      {/* <Comp /> */}
+      <Comp />
       <Calc />
-      <h1>Hii</h1>
+      <Spread/>
+      {/* <h1>Hii</h1> */}
     </div>
   );
 }
