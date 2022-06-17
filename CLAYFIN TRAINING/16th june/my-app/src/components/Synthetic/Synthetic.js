@@ -5,6 +5,7 @@ export class Synthetic extends Component {
     super();
     this.state = {
       name: "",
+      isCheck: true,
     };
   }
 
@@ -12,15 +13,20 @@ export class Synthetic extends Component {
     this.setState({ name: e.target.value });
   };
   handleClick = () => {
-    this.state.name.length > 0
-      ? alert(`${this.state.name}`)
-      : alert("Please fill the correct details");
-  };
+    if(this.state.name.length > 0){
+
+        this.setState({...this.state,isCheck:true})
+        alert(this.state.name)
+    }else{
+        this.setState({...this.state,isCheck:false})
+    };
+    }
+
   render() {
     return (
       <>
         <input type="text" onChange={this.handleChange}></input>
-        <button onClick={this.handleClick}>Click</button>
+        <button disabled= {!this.state.isCheck} onClick={this.handleClick}>Click</button>
       </>
     );
   }
