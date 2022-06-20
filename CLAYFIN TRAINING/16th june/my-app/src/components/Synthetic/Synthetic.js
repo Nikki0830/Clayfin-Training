@@ -15,7 +15,7 @@ export class Synthetic extends Component {
   handleClick = () => {
     if(this.state.name.length > 0){
 
-        this.setState({...this.state,isCheck:true})
+        // this.setState({...this.state,isCheck:true})
         alert(this.state.name)
     }else{
         this.setState({...this.state,isCheck:false})
