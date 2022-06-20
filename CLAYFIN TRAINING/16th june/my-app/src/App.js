@@ -4,6 +4,7 @@ import Gallery2 from "./components/Gallery/Gallery2";
 import Parent from "./components/Practice/Children/Parent";
 import Parent2 from "./components/Practice/Children/Propsdrilling/Parent2";
 import LifeCycle from "./components/Practice/Lifecycle/LifeCycle";
+import Map from "./components/Mappingmap/Map";
 import ReactForm from "./components/Synthetic/ReactForm";
 import Synthetic from "./components/Synthetic/Synthetic";
 
@@ -17,6 +18,7 @@ function App() {
         <Parent/>
         <Parent2/>
         <LifeCycle/>
+        <Map/>
       </div>
     </>
   );

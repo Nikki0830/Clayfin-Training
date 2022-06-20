@@ -34,11 +34,11 @@ export class LifeCycle extends Component {
 
     Increment(){
     //    this.setState({count:this.state.count+1})
-    this.setState({...this.state,name:"nikita",count:this.state.count+1})
+    this.setState({...this.state,count:this.state.count+1,name:"nikita"})
     }
-
+    
     componentWillUnmount(){
-
+    //   write code here
     }
   render() {
     return (
