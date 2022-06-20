@@ -15,7 +15,7 @@ export class ReactForm extends Component {
     const { value } = e.target;
     console.log(e);
     this.setState((prevState) => ({
-      user: { ...prevState.user, name: value },
+      user: {...prevState.user, name: value },
     }));
     // console.log("name");
   };
@@ -23,14 +23,14 @@ export class ReactForm extends Component {
     const { value } = e.target;
     // this.setState({ ...this.state.user, city: value});
     this.setState((prevState) => ({
-      user: { ...prevState.user, city: value },
+      user: {...prevState.user, city: value },
     }));
     // console.log(this.state.city);
   };
   changeAge = (e) => {
     const { value } = e.target;
     this.setState((prevState) => ({
-      user: { ...prevState.user, age: value },
+      user: {...prevState.user, age: value },
     }));
     // console.log("age");
   };
@@ -57,19 +57,19 @@ export class ReactForm extends Component {
           <Input
             funcName={this.changeName}
             name={"nameBox"}
-            val={this.state.name}
+            val={this.state.user.name}
           />
           Age:{" "}
           <Input
             funcName={this.changeAge}
             name={"ageBox"}
-            val={this.state.age}
+            val={this.state.user.age}
           />
           City :
           <Input
             funcName={this.changeCity}
             name={"cityBox"}
-            val={this.state.city}
+            val={this.state.user.city}
           />
           <Button label={"submit"} type="submit" />
           <Button label={"clear"} formAction={this.clear} />
@@ -77,6 +77,18 @@ export class ReactForm extends Component {
       </div>
     );
   }
+}
+
+
+function Input(props) {
+  // console.log(...[props]);
+  return (
+    <>
+      {/* <form> */}
+      <input onChange={props.funcName} name={props.name} value={props.val} />
+      {/* </form> */}
+    </>
+  );
 }
 
 function Button(props) {
@@ -89,15 +101,5 @@ function Button(props) {
   );
 }
 
-function Input(props) {
-  // console.log(...[props]);
-  return (
-    <>
-      {/* <form> */}
-      <input onChange={props.funcName} name={props.name} value={props.val} />
-      {/* </form> */}
-    </>
-  );
-}
 
 export default ReactForm;
