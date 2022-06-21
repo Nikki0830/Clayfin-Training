@@ -22,7 +22,7 @@ export class Cards extends Component {
         console.log(this.state.users);
       })
       .catch((err) => {
-        console.log("error");
+        console.log(err);
       });
   }
 

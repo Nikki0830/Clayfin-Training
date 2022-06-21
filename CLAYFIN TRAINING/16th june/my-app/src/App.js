@@ -9,6 +9,7 @@ import ReactForm from "./components/Synthetic/ReactForm";
 import Synthetic from "./components/Synthetic/Synthetic";
 import Destu from "./components/Destructuring/Destu";
 import Cards from "./components/Cards/Cards";
+import Inc from "./components/Assignment4/IncFive/Inc";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Map/>
         <Destu/>
         <Cards/>
+        <Inc/>
       </div>
     </>
   );
