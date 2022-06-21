@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { ProductProvider } from "./Contextfile";
 import Contextfile3 from "./Contextfile3";
+import Contextfile4 from "./Contextfile4";
 
 export class Contextfile2 extends Component {
   constructor() {
@@ -16,6 +17,7 @@ export class Contextfile2 extends Component {
     return (
       <ProductProvider value={this.state.user}>
         <Contextfile3 />
+        <Contextfile4/>
       </ProductProvider>
     );
   }

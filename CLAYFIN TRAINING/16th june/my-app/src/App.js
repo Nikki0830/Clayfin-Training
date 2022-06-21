@@ -30,8 +30,8 @@ function App() {
         <Cards/>
         <Inc/>
         <Countertwo/> */}
-        <Login/>
-        <Contextfile2/>
+        <Login />
+        <Contextfile2 />
       </div>
     </>
   );
