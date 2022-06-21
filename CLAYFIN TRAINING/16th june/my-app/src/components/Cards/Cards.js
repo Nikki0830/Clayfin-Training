@@ -42,18 +42,15 @@ function ProductChild() {
   const data = useContext(ProductContext);
   console.log("jjjj", data);
   return (
-    <div>
+    <div className="main_div2">
       {data.map((elem) => {
         return (
-          <>
-            <div className="main_div">
-              <div className="box">
-                <h1>
-                  {elem.id} {elem.name} {elem.username} {elem.email}
-                </h1>
-              </div>
-            </div>
-          </>
+          <div className="box">
+            <h3>{elem.id}</h3>
+            <h3>{elem.name}</h3>
+            <h3>{elem.username}</h3>
+            <h5>{elem.email}</h5>
+          </div>
         );
       })}
     </div>
