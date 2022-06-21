@@ -8,6 +8,7 @@ import Map from "./components/Mappingmap/Map";
 import ReactForm from "./components/Synthetic/ReactForm";
 import Synthetic from "./components/Synthetic/Synthetic";
 import Destu from "./components/Destructuring/Destu";
+import Cards from "./components/Cards/Cards";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <LifeCycle/>
         <Map/>
         <Destu/>
+        <Cards/>
       </div>
     </>
   );
