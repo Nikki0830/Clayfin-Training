@@ -10,12 +10,16 @@ import Synthetic from "./components/Synthetic/Synthetic";
 import Destu from "./components/Destructuring/Destu";
 import Cards from "./components/Cards/Cards";
 import Inc from "./components/Assignment4/IncFive/Inc";
+import Countertwo from "./components/Assignment4/IncFive/Countertwo/Countertwo";
+import Login from "./components/Assignment4/IncFive/Login/Login";
+import Contextfile from "./components/Assignment4/IncFive/Context/Contextfile";
+import Contextfile2 from "./components/Assignment4/IncFive/Context/Contextfile2";
 
 function App() {
   return (
     <>
       <div className="App">
-        <Synthetic />
+        {/* <Synthetic />
         <Gallery2 />
         <ReactForm/>
         <Parent/>
@@ -25,6 +29,9 @@ function App() {
         <Destu/>
         <Cards/>
         <Inc/>
+        <Countertwo/> */}
+        <Login/>
+        <Contextfile2/>
       </div>
     </>
   );
