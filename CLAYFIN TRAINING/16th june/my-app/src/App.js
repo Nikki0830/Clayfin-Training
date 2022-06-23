@@ -15,23 +15,26 @@ import Login from "./components/Assignment4/IncFive/Login/Login";
 import Contextfile from "./components/Assignment4/IncFive/Context/Contextfile";
 import Contextfile2 from "./components/Assignment4/IncFive/Context/Contextfile2";
 
+import FormContainer from "./components/Practice/Formhandler/FormContainer";
+
 function App() {
   return (
     <>
       <div className="App">
         {/* <Synthetic />
         <Gallery2 />
-        <ReactForm/>
-        <Parent/>
-        <Parent2/>
-        <LifeCycle/>
-        <Map/>
-        <Destu/>
-        <Cards/>
-        <Inc/>
-        <Countertwo/> */}
+        <ReactForm />
+        <Parent />
+        <Parent2 />
+        <LifeCycle />
+        <Map />
+        <Destu />
+        <Cards /> */}
+        {/* <Inc />
+        <Countertwo />
         <Login />
-        <Contextfile2 />
+        <Contextfile2 /> */}
+        <FormContainer />
       </div>
     </>
   );
