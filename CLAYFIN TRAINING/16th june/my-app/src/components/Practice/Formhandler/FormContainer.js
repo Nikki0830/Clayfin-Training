@@ -15,8 +15,7 @@ export class FormContainer extends Component {
         pass: "",
         cwd: "",
         next: true,
-      }
-     
+      },
     };
   }
 
@@ -29,14 +28,15 @@ export class FormContainer extends Component {
     e.preventDefault();
 
     this.setState((prevState) => ({
-      ...prevState.user,
-      next: false,
+      
+        user:{...prevState.user,
+            next: false,}
     }));
     // this.setState((prevState) => ({
     //     ...prevState.userDetails,
     //     userName: "davis",
     //   }));
-    console.log("jgjgjgj", this.state.user);
+    
   };
   handleChange = (e) => {
     const { name, value } = e.target;
@@ -48,6 +48,7 @@ export class FormContainer extends Component {
   };
 
   render() {
+    console.log("jgjgjgj", this.state.user);
     return (
       <>
         {this.state.user.next && (
