@@ -18,6 +18,7 @@ import Contextfile2 from "./components/Assignment4/IncFive/Context/Contextfile2"
 
 import FormContainer from "./components/Practice/Formhandler/FormContainer";
 import Reducer1 from "./components/UseReducer/Reducer1";
+import Reducer2 from "./components/UseReducer/Reducer2";
 
 function App() {
   return (
@@ -38,6 +39,7 @@ function App() {
         <Contextfile2 /> */}
         {/* <FormContainer /> */}
         <Reducer1/>
+        <Reducer2/>
       </div>
     </>
   );
