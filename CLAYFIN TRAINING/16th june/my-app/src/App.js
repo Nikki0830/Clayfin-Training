@@ -7,6 +7,7 @@ import LifeCycle from "./components/Practice/Lifecycle/LifeCycle";
 import Map from "./components/Mappingmap/Map";
 import ReactForm from "./components/Synthetic/ReactForm";
 import Synthetic from "./components/Synthetic/Synthetic";
+// import Reducer from "./components/UseReducer/Reducer1";
 import Destu from "./components/Destructuring/Destu";
 import Cards from "./components/Cards/Cards";
 import Inc from "./components/Assignment4/IncFive/Inc";
@@ -16,6 +17,7 @@ import Contextfile from "./components/Assignment4/IncFive/Context/Contextfile";
 import Contextfile2 from "./components/Assignment4/IncFive/Context/Contextfile2";
 
 import FormContainer from "./components/Practice/Formhandler/FormContainer";
+import Reducer1 from "./components/UseReducer/Reducer1";
 
 function App() {
   return (
@@ -34,7 +36,8 @@ function App() {
         <Countertwo />
         <Login />
         <Contextfile2 /> */}
-        <FormContainer />
+        {/* <FormContainer /> */}
+        <Reducer1/>
       </div>
     </>
   );

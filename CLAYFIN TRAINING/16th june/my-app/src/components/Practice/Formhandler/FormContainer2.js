@@ -22,7 +22,7 @@ export default function FormContainer2() {
   //      setMob({...mob,capche:value})
   //   }
   const handleClick = () => {
-    setMob();
+
   };
   console.log("hddsasfsaifsfsuf", mob);
   return (
